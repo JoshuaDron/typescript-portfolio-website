@@ -1,0 +1,18 @@
+.portrait {
+  width:50%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+.hello {
+  font-size: 150px;
+}
+
+body {
+  background-color: rgb(215, 250, 236);
+}

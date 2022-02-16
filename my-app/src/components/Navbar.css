@@ -1,0 +1,38 @@
+.navbar_cont {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0B0C10;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: Helvetica;
+    font-size: 25px;
+}
+
+.navButton {
+    color:#C5C6C7;
+    padding: 5px;
+    padding-inline: 3vw;
+    text-decoration: none;
+}
+
+.navButton:hover {
+    background-color: #66FCF1;
+    color:#0B0C10;
+}
+
+.logo {
+    color:#C5C6C7;
+    padding: 5px;
+    padding-inline: 15px;
+}
+
+.navbutton_cont {
+    display: flex;
+    justify-content: space-around;
+    border-bottom:solid 2px;
+    border-color: #66FCF1;
+}
+
+.logo {
+    font-size: 25px;
+}
