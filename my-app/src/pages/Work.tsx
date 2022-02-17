@@ -1,11 +1,9 @@
 import React from 'react'
 
 function Work() {
-    return (
-        <div>
-            <p>work</p>
-        </div>
-    )
+  return (
+    <div>Work</div>
+  )
 }
 
 export default Work

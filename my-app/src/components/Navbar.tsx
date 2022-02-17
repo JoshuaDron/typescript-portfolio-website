@@ -3,25 +3,26 @@ import {
     BrowserRouter as Router,
     Route,
     Link,
-    NavLink
+    NavLink,
+    useNavigate
   } from "react-router-dom";
 import './Navbar.css'
 
 function Navbar () {
-    return (
-        <Router>    
+    const navigate = useNavigate();
+
+    return (   
             <div className = "navbar_cont">
                 <a className='logo'>JOSH</a>
                 <div className="navbutton_cont">
                     <nav>
-                        <Link to='/' className = 'navButton'>Home</Link>
-                        <Link to='/About' className = 'navButton'>About</Link>
-                        <Link to='/Interests' className = 'navButton'>Interests</Link>
-                        <Link to='/work' className = 'navButton'>work</Link>
+                        <button onClick = {() => navigate('/') } className = 'navButton'>Home</button>
+                        <button onClick = {() => navigate('/about') } className = 'navButton'>About</button>
+                        <button onClick = {() => navigate('/work') } className = 'navButton'>Work</button>
+                        <button onClick = {() => navigate('/interests') } className = 'navButton'>Interests</button>
                     </nav>
                 </div>
             </div>
-        </Router>
     )
 }
 
