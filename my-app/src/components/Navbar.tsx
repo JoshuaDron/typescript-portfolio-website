@@ -6,6 +6,7 @@ import {
     NavLink,
     useNavigate
   } from "react-router-dom";
+import DrawerComponent from './Drawer';
 import './Navbar.css'
 
 function Navbar () {
@@ -20,8 +21,10 @@ function Navbar () {
                         <button onClick = {() => navigate('/about') } className = 'navButton'>About</button>
                         <button onClick = {() => navigate('/work') } className = 'navButton'>Work</button>
                         <button onClick = {() => navigate('/interests') } className = 'navButton'>Interests</button>
+                        
                     </nav>
                 </div>
+                <DrawerComponent />
             </div>
     )
 }
