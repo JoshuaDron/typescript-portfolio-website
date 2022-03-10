@@ -7,6 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 import {
   BrowserRouter as Router,
@@ -15,12 +16,14 @@ import {
   NavLink,
   useNavigate
 } from "react-router-dom";
+import { AutoAwesomeMosaic } from '@mui/icons-material';
 
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 const useStyles = makeStyles((theme) => ({
-  link: {textDecoration: 'none', color: 'black'}
+  link: {textDecoration: 'none', color: 'black'},
+  list: {display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}
 }))
 
 function TemporaryDrawer() {
@@ -50,7 +53,7 @@ function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <List className = {classes.list}>
         <Link to="/" className = {classes.link}>
           <ListItem button>
             <ListItemText primary={"Home"}/>
@@ -68,9 +71,15 @@ function TemporaryDrawer() {
         </Link>
         <Link to="/interests" className = {classes.link}>
           <ListItem button>
-            <ListItemText primary={"Interests"}/>
+            <ListItemText primary={"Interests"} />
           </ListItem>
         </Link>
+        <div className = {classes.link}>
+          <ListItem button >
+            <CloseIcon onClick={toggleDrawer('top', false)}/>
+          </ListItem>
+        </div>
+        
       </List>
     </Box>
   );
