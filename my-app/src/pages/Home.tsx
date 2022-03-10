@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import DrawerComponent from '../components/Drawer';
 import portrait from '../img/portrait.png'
 
 function Home() {
